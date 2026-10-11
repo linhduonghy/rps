@@ -1,0 +1,29 @@
+server:
+  host: 0.0.0.0
+  port: 8088
+
+log:
+  level: info
+  format: text
+
+db:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  name: rps
+  sslmode: disable
+  max_open_conns: 20
+  min_idle_conns: 5
+
+otel:
+  enabled: false
+  endpoint: http://127.0.0.1:4317
+  insecure: true
+  headers:
+    Authorization:
+
+service:
+  name: rps
+  version: 1.0.0
+  environment: local
